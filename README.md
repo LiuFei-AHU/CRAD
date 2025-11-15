@@ -15,16 +15,6 @@ The teacher model (N_T) learns from paired MRI and PET, whereas the student mode
 3. Consistency-aware confidence regularization for reliable knowledge transfer by evaluating the prediction consistency.
 
 
-## How to run the code
-
-Below demonstrates how to run this demo code. [TODO]
-1. Create a conda environment <br>
-conda create -n CRAD
-2. install Pytorch cuda <br>
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-3. install required lib<br>
-pip install -r requirements.txt
-
 ## Project structure:
 
 ```
@@ -42,10 +32,20 @@ CRAD:
 ```
 [TODO]
 
-## How to train:
+## How to run the code
+
+- ### Prepare environment. [TODO]
+1. Create a conda environment <br>
+conda create -n CRAD
+2. install Pytorch cuda <br>
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+3. install required lib<br>
+pip install -r requirements.txt
+
+- ### How to train:
 [TODO]
 
-## How to test:
+- ### How to test:
 [TODO]
 
 
