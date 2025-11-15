@@ -9,10 +9,15 @@
 ![Pipeline of the MPSFFA](Pipeline.png)
 The teacher model (N_T) learns from paired MRI and PET, whereas the student model (N_S) only learns from MRI. First, for N_T, the cognitive awareness feature refinement (CAFR) improves the disease-aware ability of the intermediate features by predicting cognitive scores, and the orthogonal projection (OP) disentangles the modality-specific representation to reduce redundancy. Then, the cross-modal self-attention distillation module (PF-CMAD) aligns intermediate features between N_T and N_S, achieving efficient shallow knowledge distillation. Moreover, the smooth distillation unit (SDU) employs the consistency-aware regularization strategy to refine the distillation on intermediate- and high-level features.
 
+## Highlights
+1. A novel hierarchical distillation framework that utilizes multilevel attention alignment to enable effective cross-modal knowledge transfer.
+2. A lightweight parameter-free attention distillation module for efficient, robust attentive feature alignment.
+3. Consistency-aware confidence regularization for reliable knowledge transfer by evaluating the prediction consistency.
+
 
 ## How to run the code
 
-Below demonstrates how to run this demo code.
+Below demonstrates how to run this demo code. [TODO]
 1. Create a conda environment <br>
 conda create -n CRAD
 2. install Pytorch cuda <br>
@@ -35,12 +40,13 @@ CRAD:
 		run_student.py
 	utils.py
 ```
+[TODO]
 
 ## How to train:
-TODO
+[TODO]
 
 ## How to test:
-TODO
+[TODO]
 
 
 ## Citation
