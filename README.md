@@ -19,18 +19,21 @@ The teacher model (N_T) learns from paired MRI and PET, whereas the student mode
 
 ```
 CRAD:
-	configs:
-		config_teacher.py
-		config_student.py
+	configs.py
+	dataset.py
 	models:
-		stas_wgh:
-			model.py
-	run:
-		run_teacher.py
-		run_student.py
+		mymodel.py
+		...
+	main.py
+	train_test.py
 	utils.py
 ```
-[TODO]
+- configs: general configs, can be changed via command params
+- dataset: a simple dataset implementation for dataloader
+- models: our proposed model and some backbones
+- main: call train and test
+- train_test: codes for training and testing
+- utils: some tools
 
 ## How to run the code
 
@@ -38,15 +41,29 @@ CRAD:
 1. Create a conda environment <br>
 conda create -n CRAD
 2. install Pytorch cuda <br>
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install pytorch torchvision torchaudio pytorch-cuda=124 -c pytorch -c nvidia
 3. install required lib<br>
 pip install -r requirements.txt
 
-- ### How to train:
-[TODO]
+- ### Train:
+1. train teacher
+   ```
+	python ./main.py --run_teacher y --task task1 --run_mode train
+   ```
+2. train student
+   ```
+	python ./main.py --run_teacher n --task task1 --run_mode train
+   ```
 
-- ### How to test:
-[TODO]
+- ### Test:
+1. test teacher
+   ```
+	python ./main.py --run_teacher y --task task1 --student_name [pretrained model name] --run_mode test
+   ```
+2. test student
+   	```
+    python ./main.py --run_teacher n --task task1 --student_name [pretrained model name] --run_mode test
+    ```
 
 
 ## Citation
