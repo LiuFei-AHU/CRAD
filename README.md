@@ -37,7 +37,7 @@ CRAD:
 
 ## How to run the code
 
-- ### Prepare environment. [TODO]
+- ### Prepare environment.
 1. Create a conda environment <br>
 conda create -n CRAD
 2. install Pytorch cuda <br>
