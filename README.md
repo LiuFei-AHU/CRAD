@@ -22,7 +22,7 @@ CRAD:
 	configs.py
 	dataset.py
 	models:
-		mymodel.py
+		crad_model.py
 		...
 	main.py
 	train_test.py
